@@ -4,7 +4,11 @@ A responsive Instagram-inspired social media web application built with React.js
 
 ## Preview
 
-![Instagram Clone Preview](./Screenshots/home.png)
+![Instagram Clone LoginPage](./Screenshots/login.png)
+
+![Instagram Clone HomePage](./Screenshots/home.png)
+
+![Instagram Clone PostPage](./Screenshots/Post.png)
 
 ## Features
 
@@ -23,10 +27,16 @@ A responsive Instagram-inspired social media web application built with React.js
 - React.js
 - JavaScript
 - HTML5
-- CSS3
+- CSS
 - React Router
 - REST APIs
 - Vite
+
+This project uses REST APIs provided for the Insta Share application to retrieve users, stories, posts, profiles, and related data.
+Project Highlights
+A component-based React application demonstrating REST API integration, authentication, routing, state management, reusable components, and responsive UI design.
+Install the dependecies : npm install
+Start the development server:  npm run dev
 
 ## Getting Started
 
@@ -34,12 +44,3 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Lasya0413/Frontend-Project-.git
-
-Install the dependecies : npm install
-
-Start the development server:  npm run dev
-
-API
-This project uses REST APIs provided for the Insta Share application to retrieve users, stories, posts, profiles, and related data.
-Project Highlights
-A component-based React application demonstrating REST API integration, authentication, routing, state management, reusable components, and responsive UI design.
