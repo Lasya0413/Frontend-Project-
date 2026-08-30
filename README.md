@@ -1,16 +1,45 @@
-# React + Vite
+# Instagram Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Instagram-inspired social media web application built with React.js. The project recreates the core Instagram experience with authentication, stories, posts, search, comments, and user profiles.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Instagram Clone Preview](./screenshots/home.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User login and authentication
+- Home feed with posts
+- Stories slider with story viewing modal
+- Like and comment interactions
+- Search functionality
+- User profile and other user details
+- Protected routes
+- Loading and error handling
+- Responsive user interface
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+- REST APIs
+- Vite
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Lasya0413/Frontend-Project-.git
+
+Install the dependecies : npm install
+
+Start the development server:  npm run dev
+
+API
+This project uses REST APIs provided for the Insta Share application to retrieve users, stories, posts, profiles, and related data.
+Project Highlights
+A component-based React application demonstrating REST API integration, authentication, routing, state management, reusable components, and responsive UI design.
