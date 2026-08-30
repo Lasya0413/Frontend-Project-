@@ -1,0 +1,89 @@
+.post-container {
+  width: 100%;
+  margin: 0 0 20px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.post-user-details {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.post-profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.post-username {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  cursor: pointer;
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.post-content {
+  padding: 12px 15px 18px;
+}
+
+.likes-count {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-caption {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #262626;
+}
+
+.post-caption span {
+  font-weight: 600;
+}
+
+.comments-count {
+  margin: 0;
+  font-size: 14px;
+  color: #737373;
+}
+
+@media screen and (max-width: 576px) {
+  .post-container {
+    margin: 15px 0;
+    border-radius: 0;
+  }
+
+  .post-content {
+    padding: 10px 12px 15px;
+  }
+}
+
+.post-profile-button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+}
+
+.post-profile-button:focus {
+  outline: none;
+}

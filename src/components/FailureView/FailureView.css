@@ -1,0 +1,22 @@
+.failure-view {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.failure-view h1 {
+  font-size: 20px;
+  color: #262626;
+  margin-bottom: 15px;
+}
+
+.failure-view button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4094ef;
+  color: #ffffff;
+  cursor: pointer;
+}

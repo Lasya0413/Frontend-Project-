@@ -1,0 +1,17 @@
+.comment-section {
+  padding: 0 15px 15px;
+}
+
+.comment {
+  margin-bottom: 8px;
+}
+
+.comment-text {
+  margin: 0;
+  font-size: 14px;
+  color: #262626;
+}
+
+.comment-username {
+  font-weight: 600;
+}

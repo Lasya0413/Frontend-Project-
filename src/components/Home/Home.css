@@ -1,0 +1,18 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.feed-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #262626;
+  margin: 25px 0 15px;
+}

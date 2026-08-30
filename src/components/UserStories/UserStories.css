@@ -1,0 +1,82 @@
+.stories-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px 45px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+
+/* Make space for the arrows */
+.stories-container .slick-slider {
+  width: 100%;
+}
+
+.stories-container .slick-list {
+  overflow: hidden;
+}
+
+/* Arrow position */
+.stories-container .slick-prev {
+  left: 5px;
+  z-index: 2;
+}
+
+.stories-container .slick-next {
+  right: 5px;
+  z-index: 2;
+}
+
+/* Make arrows visible */
+.stories-container .slick-prev:before,
+.stories-container .slick-next:before {
+  color: #262626;
+  font-size: 25px;
+  opacity: 1;
+}
+
+/* Each story */
+.stories-container .slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .stories-container {
+    padding: 20px 35px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .stories-container {
+    padding: 15px 30px;
+  }
+}
+
+.stories-container .slick-prev {
+  left: 5px;
+  z-index: 2;
+}
+
+.stories-container .slick-next {
+  right: 5px;
+  z-index: 2;
+}
+
+.stories-container .slick-prev:before,
+.stories-container .slick-next:before {
+  color: #262626;
+  font-size: 25px;
+}
+
+.stories-section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #262626;
+  margin: 0 0 15px 5px;
+}

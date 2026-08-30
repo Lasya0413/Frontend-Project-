@@ -1,0 +1,40 @@
+.posts-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 25px auto;
+  columns: 3;
+  column-gap: 20px;
+}
+
+.posts-container > * {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+.posts-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.posts-failure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.posts-failure p {
+  margin-bottom: 15px;
+}
+
+.posts-failure button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4094ef;
+  color: #ffffff;
+  cursor: pointer;
+}
