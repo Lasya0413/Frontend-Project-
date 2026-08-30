@@ -3,13 +3,13 @@
 A responsive Instagram-inspired social media web application built with React.js. The project recreates the core Instagram experience with authentication, stories, posts, search, comments, and user profiles.
 
 ## Preview
-###Login Page
+##Login Page
 ![Instagram Clone LoginPage](./Screenshots/login.png)
 
-###Home Page
+##Home Page
 ![Instagram Clone HomePage](./Screenshots/home.png)
 
-###PostPage
+##PostPage
 ![Instagram Clone PostPage](./Screenshots/Post.png)
 
 ## Features
