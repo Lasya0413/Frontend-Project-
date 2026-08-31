@@ -15,3 +15,27 @@
 .comment-username {
   font-weight: 600;
 }
+
+.comment-input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.comment-input {
+  flex: 1;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 8px 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.comment-post-button {
+  border: none;
+  background-color: transparent;
+  color: #e83e73;
+  font-weight: 600;
+  cursor: pointer;
+}

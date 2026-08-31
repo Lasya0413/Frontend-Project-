@@ -5,13 +5,21 @@ import {FaRegComment} from 'react-icons/fa'
 import {BiShareAlt} from 'react-icons/bi'
 import {FcLike} from 'react-icons/fc'
 
+import ShareModal from '../ShareModal/ShareModal'
+
 import './PostActions.css'
 
 const PostActions = props => {
-  const {postId, initialLikeStatus, initialLikesCount} = props
+  const {
+    postId,
+    initialLikeStatus,
+    initialLikesCount,
+    onClickComment,
+  } = props
 
   const [isLiked, setIsLiked] = useState(initialLikeStatus)
   const [likesCount, setLikesCount] = useState(initialLikesCount)
+  const [showShareModal, setShowShareModal] = useState(false)
 
   const onClickLike = async () => {
     const jwtToken = Cookies.get('jwt_token')
@@ -45,9 +53,16 @@ const PostActions = props => {
     }
   }
 
+  const onClickShare = () => {
+    setShowShareModal(true)
+  }
+
+  const onCloseShareModal = () => {
+    setShowShareModal(false)
+  }
+
   return (
     <div className="post-actions">
-
       <button
         type="button"
         className="action-button"
@@ -63,6 +78,7 @@ const PostActions = props => {
       <button
         type="button"
         className="action-button"
+        onClick={onClickComment}
       >
         <FaRegComment className="action-icon" />
       </button>
@@ -70,6 +86,7 @@ const PostActions = props => {
       <button
         type="button"
         className="action-button"
+        onClick={onClickShare}
       >
         <BiShareAlt className="action-icon" />
       </button>
@@ -78,6 +95,9 @@ const PostActions = props => {
         {likesCount} likes
       </p>
 
+      {showShareModal && (
+        <ShareModal onClose={onCloseShareModal} />
+      )}
     </div>
   )
 }

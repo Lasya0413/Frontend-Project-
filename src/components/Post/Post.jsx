@@ -1,6 +1,9 @@
+import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+
 import PostActions from '../PostActions/PostActions'
 import CommentSection from '../CommentSection/CommentSection'
+
 import './Post.css'
 
 const Post = props => {
@@ -17,10 +20,16 @@ const Post = props => {
     liked,
   } = postDetails
 
+  const [showCommentInput, setShowCommentInput] = useState(false)
+
   const navigate = useNavigate()
 
   const onClickUsername = () => {
     navigate(`/users/${user_id}`)
+  }
+
+  const onClickComment = () => {
+    setShowCommentInput(!showCommentInput)
   }
 
   return (
@@ -57,6 +66,7 @@ const Post = props => {
         postId={post_id}
         initialLikeStatus={liked}
         initialLikesCount={likes_count}
+        onClickComment={onClickComment}
       />
 
       <div className="post-content">
@@ -64,7 +74,10 @@ const Post = props => {
           <span>{user_name}</span> {post_details.caption}
         </p>
 
-        <CommentSection comments={comments} />
+        <CommentSection
+          comments={comments}
+          showCommentInput={showCommentInput}
+        />
       </div>
     </div>
   )
