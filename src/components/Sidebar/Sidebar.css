@@ -2,23 +2,18 @@
   position: fixed;
   top: 0;
   left: 0;
-
+  border-radius:25px;
   width: 220px;
   height: 100vh;
-
-  background-color: #ffffff;
+  background-color:#F2F3F4;
   border-right: 1px solid #e5e5e5;
-
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.20);
   padding: 30px 18px;
   box-sizing: border-box;
-
   z-index: 1000;
-
   display: flex;
   flex-direction: column;
 }
-
-
 
 
 .sidebar-logo-button {
@@ -78,7 +73,9 @@
   border-radius: 10px;
 }
 
-
+.sidebar-item p{
+  font-weight:bold;
+}
 
 
 .profile-circle {
@@ -148,7 +145,7 @@
 }
 
 
-/* Menu Items */
+
 
 .sidebar-item {
   width: 100%;
@@ -215,4 +212,25 @@
 .sidebar-bottom .sidebar-item:last-child:hover span,
 .sidebar-bottom .sidebar-item:last-child:hover p {
   color: #e53935;
+}
+
+.sidebar-item.active {
+  position: relative;
+  background-color: #fff1f6;
+}
+
+.sidebar-item.active span,
+.sidebar-item.active p {
+  color: #e83e73;
+}
+
+.sidebar-item.active::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #e83e73;
+  border-radius: 0 4px 4px 0;
 }

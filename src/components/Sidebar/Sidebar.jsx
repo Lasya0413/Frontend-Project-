@@ -1,11 +1,12 @@
 import {useEffect, useState} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useLocation, useNavigate} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import './Sidebar.css'
 
 const Sidebar = () => {
   const navigate = useNavigate()
+  const location = useLocation()
 
   const [userDetails, setUserDetails] = useState({})
 
@@ -53,7 +54,6 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-
       <button
         type="button"
         className="sidebar-logo-button"
@@ -85,10 +85,11 @@ const Sidebar = () => {
       </button>
 
       <div className="sidebar-menu">
-
         <button
           type="button"
-          className="sidebar-item"
+          className={`sidebar-item ${
+            location.pathname === '/' ? 'active' : ''
+          }`}
           onClick={onClickHome}
         >
           <span>⌂</span>
@@ -119,11 +120,9 @@ const Sidebar = () => {
           <span>▣</span>
           <p>Stats</p>
         </div>
-
       </div>
 
       <div className="sidebar-bottom">
-
         <div className="sidebar-item">
           <span>⚙</span>
           <p>Settings</p>
@@ -137,9 +136,7 @@ const Sidebar = () => {
           <span>⇥</span>
           <p>Logout</p>
         </button>
-
       </div>
-
     </aside>
   )
 }

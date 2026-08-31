@@ -6,6 +6,7 @@
   background-color: #ffffff;
   border: 1px solid #dbdbdb;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Make space for the arrows */
@@ -36,7 +37,7 @@
   opacity: 1;
 }
 
-/* Each story */
+
 .stories-container .slick-slide > div {
   display: flex;
   justify-content: center;
@@ -78,5 +79,5 @@
   font-size: 22px;
   font-weight: 700;
   color: #262626;
-  margin: 0 0 15px 5px;
+  margin: 0 0 2px 2px;
 }
