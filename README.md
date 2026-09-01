@@ -9,8 +9,11 @@ A responsive Instagram-inspired social media web application built with React.js
 ##Home Page
 ![Instagram Clone HomePage](./Screenshots/home.png)
 
-##PostPage
-![Instagram Clone PostPage](./Screenshots/Post.png)
+##Profile Page
+![Instagram Clone PostPage](./Screenshots/profile.png)
+
+##Post Page
+![Instagram Clone PostPage](./Screenshots/post.png)
 
 ## Features
 
