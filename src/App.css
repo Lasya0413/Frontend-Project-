@@ -2,4 +2,128 @@
   margin-left: 220px;
   padding-top: 60px;
   min-height: 100vh;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #fafafa;
+  color: #262626;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark-mode,
+.app.dark-mode .page-content {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  border-right-color: #333;
+}
+
+.dark-mode .sidebar-item p,
+.dark-mode .sidebar-item span,
+.dark-mode .profile-name,
+.dark-mode .profile-username {
+  color: #f5f5f5;
+}
+
+.dark-mode .sidebar-profile:hover,
+.dark-mode .sidebar-item:hover {
+  background-color: #303030;
+}
+
+.dark-mode .sidebar-item.active {
+  background-color: #3a2632;
+}
+
+.dark-mode .sidebar-item.active p,
+.dark-mode .sidebar-item.active span {
+  color: #ff75a8;
+}
+
+.dark-mode .header {
+  background-color: #1e1e1e;
+  border-bottom-color: #333;
+}
+
+.dark-mode .header-icon-button,
+.dark-mode .header-actions {
+  color: #f5f5f5;
+}
+
+.dark-mode .search-input {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+.dark-mode .stories-container,
+.dark-mode .post-container {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+  border-color: #333 !important;
+}
+
+.dark-mode .section-title,
+.dark-mode .post-content,
+.dark-mode .post-caption,
+.dark-mode .likes-count,
+.dark-mode .comment-text {
+  color: #f5f5f5 !important;
+}
+
+.dark-mode .profile-container,
+.dark-mode .profile-header,
+.dark-mode .user-details-container {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #333;
+}
+
+.dark-mode .page-content h1,
+.dark-mode .page-content h2,
+.dark-mode .page-content h3,
+.dark-mode .page-content h4,
+.dark-mode .page-content p,
+.dark-mode .page-content span,
+.dark-mode .page-content label {
+  color: #f5f5f5;
+}
+
+.dark-mode .post-container p,
+.dark-mode .post-container span,
+.dark-mode .post-container h3,
+.dark-mode .post-container h4,
+.dark-mode .stories-container p,
+.dark-mode .stories-container span {
+  color: #f5f5f5 !important;
+}
+
+.dark-mode .page-content input,
+.dark-mode .page-content textarea {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+.dark-mode .page-content a {
+  color: #ff75a8;
+}
+
+.app.dark-mode .page-content .post-container * {
+  color: #f5f5f5 !important;
+}
+
+.app.dark-mode .page-content .home-container,
+.app.dark-mode .page-content .home-content {
+  background-color: #121212 !important;
+  color: #f5f5f5 !important;
+}
+
+.app.dark-mode .page-content .feed-title {
+  color: #f5f5f5 !important;
 }

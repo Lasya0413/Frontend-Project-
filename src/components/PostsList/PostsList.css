@@ -38,3 +38,22 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+/* Dark mode for posts displayed on Home */
+.app.dark-mode .posts-container {
+  color: #f5f5f5;
+}
+
+.app.dark-mode .posts-container h1,
+.app.dark-mode .posts-container h2,
+.app.dark-mode .posts-container h3,
+.app.dark-mode .posts-container p,
+.app.dark-mode .posts-container span {
+  color: #f5f5f5;
+}
+
+.app.dark-mode .posts-container > * {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #333;
+}

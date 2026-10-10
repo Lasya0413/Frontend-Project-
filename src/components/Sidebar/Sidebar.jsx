@@ -1,13 +1,12 @@
+
 import {useEffect, useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
 import Cookies from 'js-cookie'
-
 import './Sidebar.css'
 
-const Sidebar = () => {
+const Sidebar = ({darkMode, toggleDarkMode}) => {
   const navigate = useNavigate()
   const location = useLocation()
-
   const [userDetails, setUserDetails] = useState({})
 
   const getUserDetails = async () => {
@@ -20,14 +19,18 @@ const Sidebar = () => {
       },
     }
 
-    const response = await fetch(
-      'https://apis.ccbp.in/insta-share/my-profile',
-      options,
-    )
+    try {
+      const response = await fetch(
+        'https://apis.ccbp.in/insta-share/my-profile',
+        options,
+      )
 
-    if (response.ok) {
-      const data = await response.json()
-      setUserDetails(data.profile)
+      if (response.ok) {
+        const data = await response.json()
+        setUserDetails(data.profile)
+      }
+    } catch (error) {
+      console.error('Unable to fetch profile:', error)
     }
   }
 
@@ -35,17 +38,9 @@ const Sidebar = () => {
     getUserDetails()
   }, [])
 
-  const onClickLogo = () => {
-    navigate('/')
-  }
-
-  const onClickHome = () => {
-    navigate('/')
-  }
-
-  const onClickProfile = () => {
-    navigate('/profile')
-  }
+  const onClickLogo = () => navigate('/')
+  const onClickHome = () => navigate('/')
+  const onClickProfile = () => navigate('/profile')
 
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
@@ -74,13 +69,8 @@ const Sidebar = () => {
         />
 
         <div className="profile-details">
-          <p className="profile-name">
-            {userDetails.user_name}
-          </p>
-
-          <p className="profile-username">
-            @{userDetails.user_id}
-          </p>
+          <p className="profile-name">{userDetails.user_name}</p>
+          <p className="profile-username">@{userDetails.user_id}</p>
         </div>
       </button>
 
@@ -123,6 +113,15 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar-bottom">
+        <button
+          type="button"
+          className="sidebar-item theme-toggle-button"
+          onClick={toggleDarkMode}
+        >
+          <span>{darkMode ? '☀' : '☾'}</span>
+          <p>{darkMode ? 'Light Mode' : 'Dark Mode'}</p>
+        </button>
+
         <div className="sidebar-item">
           <span>⚙</span>
           <p>Settings</p>
